@@ -4,12 +4,12 @@
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
     android:orientation="vertical"
+    android:padding="16dp"
     tools:context=".MainActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
         android:text="Team A" />
 
@@ -17,23 +17,27 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:text="3" />
+        android:text="0"
+        android:id="@+id/team_a_score"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:text="+3 POINTS" />
+        android:text="+3 POINTS"
+        android:onClick="p3Button"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:text="+2 POINTS" />
+        android:text="+2 POINTS"
+        android:onClick="p2Button"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="FREE THROW" />
+        android:text="FREE THROW"
+        android:onClick="fthButton"/>
 
 </LinearLayout>
