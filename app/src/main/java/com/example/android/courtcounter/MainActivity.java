@@ -9,13 +9,14 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-
+    int scoreTeamA = 0;
+    int scoreTeamB = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        displayForTeamA(0);
+        displayForTeamA(scoreTeamA);
     }
 
     @Override
@@ -40,22 +41,48 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void p3Button(View view) {
-        displayForTeamA(3);
+    public void p3ToA(View view) {
+        scoreTeamA = scoreTeamA + 3;
+        displayForTeamA(scoreTeamA);
     }
 
-    public void p2Button(View view) {
-        displayForTeamA(2);
+    public void p2ToA(View view) {
+        scoreTeamA = scoreTeamA + 2;
+        displayForTeamA(scoreTeamA);
     }
 
-    public void fthButton(View view) {
-        displayForTeamA(1);
+    public void fthToA(View view) {
+        scoreTeamA = scoreTeamA + 1;
+        displayForTeamA(scoreTeamA);
+    }
+
+    public void p3ToB(View view) {
+        scoreTeamB = scoreTeamB + 3;
+        displayForTeamB(scoreTeamB);
+    }
+
+    public void p2ToB(View view) {
+        scoreTeamB = scoreTeamB + 2;
+        displayForTeamB(scoreTeamB);
+    }
+
+    public void fthToB(View view) {
+        scoreTeamB = scoreTeamB + 1;
+        displayForTeamB(scoreTeamB);
     }
 
     /**
      * Displays the given score for Team A.
      */
     public void displayForTeamA(int score) {
+        TextView scoreView = (TextView) findViewById(R.id.team_a_score);
+        scoreView.setText(String.valueOf(scoreTeamA));
+    }
+
+    /**
+     * Displays the given score for Team B.
+     */
+    public void displayForTeamB(int score) {
         TextView scoreView = (TextView) findViewById(R.id.team_a_score);
         scoreView.setText(String.valueOf(score));
     }

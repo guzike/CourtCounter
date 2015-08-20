@@ -25,19 +25,19 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:text="+3 POINTS"
-        android:onClick="p3Button"/>
+        android:onClick="p3ToA"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:text="+2 POINTS"
-        android:onClick="p2Button"/>
+        android:onClick="p2ToA"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="FREE THROW"
-        android:onClick="fthButton"/>
+        android:onClick="fthToA"/>
 
 </LinearLayout>
